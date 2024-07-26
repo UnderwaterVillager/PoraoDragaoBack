@@ -17,5 +17,6 @@ class Product(models.Model):
 
 class Image(models.Model):
     image_name = models.CharField(verbose_name="nome da imagem", max_length=50)
-    image = models.ImageField(verbose_name="imagem", upload_to="media/")
+    image = models.ImageField(verbose_name="imagem", upload_to="")
     related_product = models.ForeignKey(Product, null=True, blank=True, on_delete=models.CASCADE)
+    related_user = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE)

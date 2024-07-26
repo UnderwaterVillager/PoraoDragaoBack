@@ -20,4 +20,5 @@ class ProductInline(admin.TabularInline):
 class UserAdmin(admin.ModelAdmin):
     inlines = [
         ProductInline,
+        ImageInline
     ]
