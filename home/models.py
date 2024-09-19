@@ -2,8 +2,11 @@ from django.db import models
 
 class User(models.Model):
     username = models.CharField(verbose_name="nome", max_length=50)
+    password = models.CharField(verbose_name="senha", max_length=50)
+    email = models.EmailField(verbose_name="email")
+    phonenumber = models.CharField(verbose_name="telefone", max_length=15)
+    location = models.CharField(verbose_name="local", max_length=200)
 
-# Create your models here.
 class Product(models.Model):
     name = models.CharField(verbose_name="nome", max_length=100)
     publication_date = models.DateField(verbose_name="data de publicação")
